@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@ 
+
+@{
+    ViewData["Title"] = "Create or or Edit";
+}
+<!--Add the model to use its properties in the document-->
+@model WebApplication1.Models.Expense
+
+<div class="text-center"> 
+    <h1 class="dsplay-4" >Create or edit an Expenses</h1>
+
+</div>
+
+<!--Adding the Form-->
+<form asp-action="CreateEditExpenseForm">
+
+    @*<label>Id</label>*@
+
+    <input hidden class="form-control" type="number" placeholder="0" asp-for="Id" />
+
+    <label>
+        Value:
+    </label>
+
+    <input class="form-control" type="number" placeholder="0" asp-for="value" />
+
+    <label>
+        Description:
+    </label>
+
+    <input class="form-control" type="text" placeholder="Add Description" asp-for="Description" />
+
+    <button class="btn btn-primary" type="submit" >Submit</button>
+
+</form>
